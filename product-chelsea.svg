@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800">
+  <defs>
+    <linearGradient id="wood" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#78513d"/><stop offset=".5" stop-color="#a97854"/><stop offset="1" stop-color="#4e3328"/></linearGradient>
+    <linearGradient id="kit" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#252a28"/><stop offset=".6" stop-color="#090d0e"/><stop offset="1" stop-color="#1f2421"/></linearGradient>
+  </defs>
+  <rect width="800" height="800" fill="url(#wood)"/>
+  <g opacity=".22" stroke="#2d1d18" stroke-width="8"><path d="M0 80h800M0 210h800M0 350h800M0 500h800M0 670h800"/><path d="M120 0c-25 200 30 400-10 800M490 0c30 240-20 440 12 800M700 0c-25 260 20 500-5 800"/></g>
+  <g transform="translate(225 55)">
+    <path d="M135 22 46 74 0 161l83 52 43-59v430h350V154l43 59 83-52-46-87-89-52-74 35H209z" fill="url(#kit)" stroke="#111" stroke-width="7"/>
+    <path d="M135 22c17 68 60 88 116 88s99-20 116-88" fill="none" stroke="#d9f20b" stroke-width="20"/>
+    <path d="M12 157 82 203M506 203l70-46M126 198l-42 60M429 198l42 60" fill="none" stroke="#d9f20b" stroke-width="11"/>
+    <path d="M160 238h280M160 282h280M160 326h280" stroke="#252b28" stroke-width="5"/>
+    <path d="M282 170h75" stroke="#d9f20b" stroke-width="7"/><circle cx="245" cy="168" r="13" fill="#d9f20b"/>
+    <text x="280" y="390" fill="#d9f20b" font-family="Arial" font-size="42" font-weight="700" text-anchor="middle">GS</text>
+    <path d="M83 584h170l-6 119H43zM253 584h170l40 119H246z" fill="#0b0f0f" stroke="#d9f20b" stroke-width="8"/>
+  </g>
+</svg>
