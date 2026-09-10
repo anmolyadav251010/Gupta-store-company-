@@ -93,6 +93,20 @@
       </section>
     </main>
 
+    <button class="cart-launcher" type="button" aria-controls="cart-panel" aria-expanded="false">
+      <span class="cart-icon">▱</span>
+      <span>Check your cart</span>
+      <strong class="cart-count">0</strong>
+    </button>
+    <div class="cart-backdrop" data-cart-close></div>
+    <aside class="cart-panel" id="cart-panel" aria-label="Shopping cart" aria-hidden="true">
+      <div class="cart-panel-head"><div><p class="kicker"><span></span> Your line-up</p><h2>Your<br /><em>Cart.</em></h2></div><button class="cart-close" type="button" aria-label="Close cart" data-cart-close>×</button></div>
+      <div class="cart-items"></div>
+      <div class="cart-empty"><span class="empty-ball">⚽</span><h3>Your cart is empty</h3><p>Add a jersey or boot and it will show up here.</p></div>
+      <div class="cart-footer"><div><span>Total</span><strong class="cart-total">₹0</strong></div><button class="checkout-button" type="button" disabled>Proceed to checkout</button></div>
+    </aside>
+
     <footer class="site-footer"><span>GUPTA SPORTS<span class="lime">.</span></span><span>JERSEY · BOOTS · FOOTBALL</span><span>© 2026</span></footer>
+    <script src="script.js"></script>
   </body>
 </html>
