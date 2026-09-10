@@ -47,10 +47,20 @@ h1 em, h2 em { color: var(--lime); font-style: normal; }
 .button-lime:hover { background: #e4ff75; }
 .button-quiet { border: 1px solid var(--line); color: var(--paper); }
 .button-quiet:hover { border-color: var(--lime); color: var(--lime); }
-.hero-art { position: relative; min-height: 700px; overflow: hidden; background: linear-gradient(145deg, #29392b 0%, #111711 64%); animation: artReveal 1.3s cubic-bezier(.22, 1, .36, 1) .95s both; }
+.hero-art { position: relative; min-height: 700px; overflow: hidden; background: linear-gradient(145deg, rgba(21, 39, 25, .72), rgba(10, 17, 12, .96)), url("https://images.unsplash.com/photo-1579952363873-27f3bade9f55?auto=format&fit=crop&w=1400&q=85") center / cover; animation: artReveal 1.3s cubic-bezier(.22, 1, .36, 1) .95s both; }
 .hero-art::before { content: ""; position: absolute; inset: -20%; background: repeating-linear-gradient(116deg, transparent 0 100px, rgba(214, 246, 74, .06) 101px 103px, transparent 104px 180px); transform: rotate(9deg); }
 .hero-art::before { animation: driftLines 18s linear infinite; }
 .hero-art::after { content: ""; position: absolute; width: 460px; height: 460px; right: -130px; bottom: -130px; border: 1px solid rgba(214, 246, 74, .45); border-radius: 50%; box-shadow: 0 0 0 40px rgba(214, 246, 74, .03), 0 0 0 80px rgba(214, 246, 74, .03); }
+.stadium-glow { position: absolute; inset: 0; z-index: 0; background: radial-gradient(ellipse at 50% -12%, rgba(255, 255, 235, .3), transparent 34%), linear-gradient(180deg, transparent 58%, rgba(0, 0, 0, .62)); mix-blend-mode: screen; animation: glowBreath 5s ease-in-out infinite; }
+.grass-edge { position: absolute; z-index: 0; right: -8%; bottom: -8%; width: 120%; height: 30%; opacity: .6; background: repeating-linear-gradient(95deg, rgba(214, 246, 74, .18) 0 2px, transparent 2px 12px); transform: perspective(180px) rotateX(45deg) rotate(-4deg); transform-origin: bottom; animation: grassSway 6s ease-in-out infinite alternate; }
+.floating-ball { position: absolute; z-index: 2; display: grid; place-items: center; width: 42px; height: 42px; border-radius: 50%; color: rgba(243, 241, 232, .85); font-size: 1.9rem; filter: grayscale(1) drop-shadow(0 12px 12px rgba(0, 0, 0, .35)); opacity: .8; }
+.ball-one { top: 14%; right: 14%; animation: floatBallOne 8s ease-in-out 1.8s infinite; }
+.ball-two { top: 56%; left: 10%; font-size: 1.35rem; opacity: .45; animation: floatBallTwo 10s ease-in-out 2.3s infinite; }
+.ball-three { right: 28%; bottom: 10%; font-size: 1rem; opacity: .3; animation: floatBallThree 7s ease-in-out 2.8s infinite; }
+.air-particle { position: absolute; z-index: 1; width: 5px; height: 5px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 16px var(--lime); }
+.particle-one { top: 33%; left: 12%; animation: particleDrift 5s ease-in-out 1.6s infinite; }
+.particle-two { top: 23%; right: 34%; width: 3px; height: 3px; animation: particleDrift 6.5s ease-in-out 2.4s infinite reverse; }
+.particle-three { bottom: 35%; right: 13%; width: 4px; height: 4px; animation: particleDrift 7s ease-in-out 1.8s infinite; }
 .roaming-ball { position: absolute; z-index: 2; top: 17%; left: 9%; width: 54px; height: 54px; border: 2px solid var(--paper); border-radius: 50%; background: radial-gradient(circle at 34% 28%, #fff 0 7%, transparent 8%), radial-gradient(circle at 68% 64%, var(--lime) 0 10%, transparent 11%), radial-gradient(circle at 50% 50%, transparent 0 42%, rgba(243, 241, 232, .25) 43% 45%, transparent 46%); box-shadow: 0 0 26px rgba(214, 246, 74, .18); animation: ballRoam 9s cubic-bezier(.45, .05, .55, .95) 1.45s infinite; }
 .roaming-ball::before, .roaming-ball::after, .roaming-ball span { content: ""; position: absolute; display: block; width: 13px; height: 13px; border: 1px solid rgba(243, 241, 232, .75); border-radius: 50%; }
 .roaming-ball::before { top: 4px; right: 6px; }
@@ -116,6 +126,12 @@ h2 { margin-bottom: 0; font-size: clamp(4rem, 9vw, 8.5rem); line-height: .78; le
 @keyframes artReveal { from { opacity: 0; clip-path: inset(0 0 0 100%); } to { opacity: 1; clip-path: inset(0 0 0 0); } }
 @keyframes driftLines { from { transform: rotate(9deg) translate3d(0, 0, 0); } to { transform: rotate(9deg) translate3d(-120px, 60px, 0); } }
 @keyframes ballRoam { 0% { transform: translate(0, 0) rotate(0); } 22% { transform: translate(22vw, 95px) rotate(150deg); } 46% { transform: translate(4vw, 285px) rotate(320deg); } 70% { transform: translate(29vw, 430px) rotate(520deg); } 100% { transform: translate(5vw, 570px) rotate(720deg); } }
+@keyframes glowBreath { 0%, 100% { opacity: .55; transform: scale(1); } 50% { opacity: .85; transform: scale(1.08); } }
+@keyframes grassSway { from { transform: perspective(180px) rotateX(45deg) rotate(-4deg) translateX(-12px); } to { transform: perspective(180px) rotateX(45deg) rotate(-4deg) translateX(12px); } }
+@keyframes floatBallOne { 0%, 100% { transform: translate3d(0, 0, 0) rotate(-8deg); } 35% { transform: translate3d(-25px, 42px, 0) rotate(120deg); } 70% { transform: translate3d(24px, 75px, 0) rotate(245deg); } }
+@keyframes floatBallTwo { 0%, 100% { transform: translate3d(0, 0, 0) rotate(0); } 50% { transform: translate3d(38px, -30px, 0) rotate(180deg); } }
+@keyframes floatBallThree { 0%, 100% { transform: translate3d(0, 0, 0); } 50% { transform: translate3d(-20px, -38px, 0) rotate(-180deg); } }
+@keyframes particleDrift { 0%, 100% { opacity: .15; transform: translate(0, 0) scale(.6); } 50% { opacity: .9; transform: translate(18px, -28px) scale(1.2); } }
 
 @media (max-width: 760px) {
   .site-header { min-height: 70px; }
@@ -125,6 +141,9 @@ h2 { margin-bottom: 0; font-size: clamp(4rem, 9vw, 8.5rem); line-height: .78; le
   .hero-copy { padding: 80px 24px 75px; }
   .hero-art { min-height: 490px; }
   .roaming-ball { animation-name: ballRoamMobile; }
+  .ball-one { top: 13%; right: 10%; }
+  .ball-two { top: 58%; left: 6%; }
+  .grass-edge { height: 24%; }
   h1 { font-size: clamp(4.7rem, 23vw, 8rem); }
   .ticker { justify-content: flex-start; }
   .ticker div:nth-child(even) { display: none; }
