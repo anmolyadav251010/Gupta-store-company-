@@ -3,51 +3,83 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gupta Sports</title>
+    <meta name="description" content="Gupta Sports: football jerseys, boots, and match-ready gear." />
+    <title>Gupta Sports | Match Ready</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <style>
-      :root { color-scheme: dark; }
-      * { box-sizing: border-box; }
-      body {
-        min-height: 100vh;
-        margin: 0;
-        display: grid;
-        place-items: center;
-        background: #000;
-        color: #fff;
-        font-family: Georgia, "Times New Roman", serif;
-        text-align: center;
-      }
-      main { padding: 32px; }
-      .mark {
-        margin: 0;
-        font-size: clamp(6rem, 22vw, 12rem);
-        line-height: .72;
-        letter-spacing: -.16em;
-        transform: translateX(-.08em);
-      }
-      .name {
-        margin: 28px 0 0;
-        font-family: Arial, sans-serif;
-        font-size: clamp(1rem, 3vw, 1.6rem);
-        font-weight: 700;
-        letter-spacing: .42em;
-        text-transform: uppercase;
-      }
-      .details {
-        margin: 28px 0 0;
-        color: #c7c7c7;
-        font-family: Arial, sans-serif;
-        font-size: .95rem;
-        letter-spacing: .08em;
-      }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <main>
-      <p class="mark" aria-label="GS">GS</p>
-      <p class="name">Gupta Sports.</p>
-      <p class="details">Jersey · Shoes · All Sportswear<br />169, Sarojini Nagar Market.</p>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Gupta Sports home">
+        <span class="brand-mark">GS</span>
+        <span class="brand-name">Gupta <b>Sports</b></span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <a href="#shop">Shop</a>
+        <a href="#categories">Categories</a>
+        <a href="#about">About</a>
+      </nav>
+      <a class="location-link" href="https://maps.app.goo.gl/zLjqCY7GtgR5CyCw8?g_st=iw" target="_blank" rel="noreferrer">
+        <span class="pin">+</span> Visit store
+      </a>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="kicker"><span></span> Sarojini Nagar, New Delhi</p>
+          <h1>PLAY<br /><em>WITH</em><br />PURPOSE.</h1>
+          <p class="hero-intro">Football jerseys, boots, and game-day essentials for players who bring their own energy to the pitch.</p>
+          <div class="hero-actions">
+            <a class="button button-lime" href="#shop">Explore the collection <span>↗</span></a>
+            <a class="button button-quiet" href="https://maps.app.goo.gl/zLjqCY7GtgR5CyCw8?g_st=iw" target="_blank" rel="noreferrer">Find us on maps <span>↗</span></a>
+          </div>
+        </div>
+        <div class="hero-art" aria-label="Football boot ready for match day">
+          <div class="art-label">01 <span>/</span> MATCH DAY</div>
+          <div class="ball-line"></div>
+          <div class="boot-placeholder">
+            <span class="boot-symbol">✦</span>
+            <span>YOUR<br />GAME<br />STARTS<br />HERE</span>
+          </div>
+          <div class="hero-sticker">EST.<br /><strong>GS</strong><br />FOOTBALL</div>
+          <p class="art-note">BUILT FOR<br />THE 90'</p>
+        </div>
+      </section>
+
+      <section class="ticker" aria-label="Gupta Sports services">
+        <div>AUTHENTIC KITS</div><div>PERFORMANCE BOOTS</div><div>READY FOR KICK-OFF</div><div>AUTHENTIC KITS</div>
+      </section>
+
+      <section class="section categories" id="categories">
+        <div class="section-topline"><p class="kicker"><span></span> Start here</p><span class="section-number">01 / 03</span></div>
+        <div class="section-heading"><h2>YOUR<br /><em>POSITION?</em></h2><p>Find the gear that matches your game. More products and prices are landing soon.</p></div>
+        <div class="category-grid">
+          <a class="category-card category-jerseys" href="#shop"><span class="card-number">01</span><span class="category-icon">▱</span><h3>Jerseys</h3><span class="card-arrow">↗</span></a>
+          <a class="category-card category-boots" href="#shop"><span class="card-number">02</span><span class="category-icon">⌁</span><h3>Football Boots</h3><span class="card-arrow">↗</span></a>
+          <a class="category-card category-training" href="#shop"><span class="card-number">03</span><span class="category-icon">+</span><h3>Training Gear</h3><span class="card-arrow">↗</span></a>
+        </div>
+      </section>
+
+      <section class="section shop" id="shop">
+        <div class="section-topline"><p class="kicker"><span></span> The line-up</p><span class="section-number">02 / 03</span></div>
+        <div class="shop-header"><h2>COMING<br /><em>TO THE PITCH.</em></h2><span class="count-badge">PRODUCTS<br />LOADING</span></div>
+        <div class="empty-shop">
+          <div class="empty-mark">GS</div>
+          <div><h3>Your next favourite kit starts here.</h3><p>Send us the product image, name, price, and category. We’ll build the collection right here.</p></div>
+          <span class="empty-arrow">↓</span>
+        </div>
+      </section>
+
+      <section class="visit" id="about">
+        <div><p class="kicker"><span></span> Come through</p><h2>SEE YOU<br /><em>ON THE STREET.</em></h2></div>
+        <div class="visit-detail"><p>Gupta Sports<br />169, Sarojini Nagar Market<br />New Delhi</p><a class="button button-lime" href="https://maps.app.goo.gl/zLjqCY7GtgR5CyCw8?g_st=iw" target="_blank" rel="noreferrer">Open location <span>↗</span></a></div>
+      </section>
     </main>
+
+    <footer class="site-footer"><span>GUPTA SPORTS<span class="lime">.</span></span><span>JERSEY · BOOTS · FOOTBALL</span><span>© 2026</span></footer>
   </body>
 </html>
