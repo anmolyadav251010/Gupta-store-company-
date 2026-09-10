@@ -123,7 +123,7 @@ h2 { margin-bottom: 0; font-size: clamp(4rem, 9vw, 8.5rem); line-height: .78; le
 .product-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
 .product-card { overflow: hidden; border-radius: 24px 8px 24px 8px; background: #e8ead9; color: var(--ink); box-shadow: 0 18px 38px rgba(0, 0, 0, .16); }
 .product-photo { position: relative; aspect-ratio: 1 / 1; overflow: hidden; background: #76503c; background-position: center; background-size: cover; }
-.chelsea-photo { background-image: url("product-chelsea.svg"); }
+.chelsea-photo { background-image: url("chelsea-away.jpg"); }
 .product-tag { position: absolute; top: 14px; left: 14px; padding: 7px 10px; border-radius: 12px 4px 12px 4px; color: var(--ink); background: var(--lime); font-size: .6rem; font-weight: 800; letter-spacing: .1em; }
 .kit-label { position: absolute; right: 16px; bottom: 14px; color: var(--lime); font: 700 .75rem/1 var(--display); letter-spacing: .08em; text-align: right; }
 .product-card-info { display: flex; justify-content: space-between; gap: 12px; padding: 18px 18px 12px; }
